@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ZUIDemo</title>
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/zui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="lib/datatable/zui.datatable.min.css">
+    <link rel="stylesheet" href="lib/bootbox/bootbox.min.css">
+    
+    <link rel="stylesheet" href="lib/datetimepicker/datetimepicker.min.css">
+</head>
+
+<body>
+    <header class="header-wraper">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container-fluid cont">
+                <!-- 导航头部 -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="javascript:;">DEMO</a>
+                    <!-- 移动设备上的导航切换按钮 -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-collapse-example">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- 导航项目 -->
+                <div class="collapse navbar-collapse navbar-collapse-example">
+                    <ul class="nav navbar-nav">
+                        <li><a href="javascript:;">项目一</a></li>
+                        <li><a href="javascript:;">项目二</a></li>
+                        <li><a href="javascript:;">需求一</a></li>
+                        <li><a href="javascript:;">需求二</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="搜索">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                    <!-- 右侧的导航项目 -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="javascript:;">帮助</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i
+                                    class="icon icon-user"></i> 用户<b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="javascript:;">敏捷开发</a></li>
+                                <li><a href="javascript:;">HTML5</a></li>
+                                <li><a href="javascript:;">Javascript</a></li>
+                                <li class="divider"></li>
+                                <li><a href="javascript:;">探索宇宙</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- END .navbar-collapse -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- 内容 -->
+    <div class="wraper">
+        <div class="cont">
+            <nav class="menu" data-ride="menu">
+                <ul id="treeMenu" class="tree tree-menu" data-ride="tree">
+                    <li><a href="#"><i class="icon icon-sitemap"></i>项目概况</a></li>
+                    <li><a href="#"><i class="icon icon-bug"></i>活动问题</a></li>
+                    <li><a href="#"><i class="icon icon-bug"></i>所有问题</a></li>
+                    <li><a href="#"><i class="icon icon-list-ul"></i>问题统计</a></li>
+                    <li class="">
+                        <a href="#"><i class="icon icon-tasks"></i>状态</a>
+                        <ul>
+                            <li>
+                                <a href="#"><i class="icon icon-circle-blank"></i>已就绪</a>
+                                <ul>
+                                    <li><a href="#">已取消</a></li>
+                                    <li><a href="#">已关闭</a></li>
+                                </ul>
+                            </li>
+                            <li class=""><a href="#"><i class="icon icon-play-sign"></i>进行中</a></li>
+                            <li><a href="#"><i class="icon icon-ok-sign"></i>已完成</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- 表格 -->
+            <div class="cont-right">
+                <div class="btngroup">
+                    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">添加</button>
+                </div>
+                <!-- <div class="table datatable"></div> -->
+                <table class="table datatable">
+                    <thead>
+                        <tr>
+                            <th>编号</th>
+                            <th>类型</th>
+                            <th data-sort="false" data-width="200">标题</th>
+                            <th>状态</th>
+                            <th>优先级</th>
+                            <th>指派给</th>
+                            <th>计划日期</th>
+                            <th>截止日期</th>
+                            <th>修改日期</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><span class="type01">任务</span></td>
+                            <td><input type="text" class="form-control title-input" value="标题标题标题标题标题"></td>
+                            <td><span class="stause01">未解决</span></td>
+                            <td><span class="grade01">中</span></td>
+                            <td>耿玉霞</td>
+                            <td>2020-03-09</td>
+                            <td>2020-03-09</td>
+                            <td>2020-03-09</td>
+                        </tr>
+                        <!-- <tr>
+                            <td>2</td>
+                            <td><span class="type02">问题</span></td>
+                            <td><input type="text" class="form-control"  value="标题标题标题标题标题22"></td>
+                            <td><span class="stause02">解决</span></td>
+                            <td><span class="grade01">中</span></td>
+                            <td>耿耿</td>
+                            <td>2020-03-08</td>
+                            <td>2020-03-08</td>
+                            <td>2020-03-08</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加表单 -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">关闭</span></button>
+                <h4 class="modal-title">添加</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="exampleInputAccount4" class="col-sm-2">标题</label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control" id="exampleInputAccount4" placeholder="请输入标题">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword4" class="col-sm-2">优先级</label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control" id="exampleInputPassword4" placeholder="请输入优先级">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword4" class="col-sm-2">类型</label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control" id="exampleInputPassword4" placeholder="请输入类型">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword4" class="col-sm-2">计划日期</label>
+                        <div class="col-md-6 col-sm-10">
+                            <input type="text" class="form-control form-date" placeholder="请选择计划日期">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bugInfoPage animated fadeOutRightBig" id="bugInfoPage">
+        <div class="bugInfoContent bugInfoPageContent">
+            <div class="slimScrollDiv">
+                <div class="bugInfoPageNr">
+                    <div class="panel-default bugInfo">
+                        <div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <label class="col-xs-3 control-label pd0">标题</label>
+                                    <div class="col-xs-9 bugInfoProject txt pd0" id="title">标题标题标题标题标题标题</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <label class="col-xs-3 control-label pd0">状态</label>
+                                    <div class="col-xs-9 bugInfoState txt pd0"><span
+                                            class="label label-danger">未解决</span></div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <label class="col-xs-3 control-label pd0">优先级</label>
+                                    <div class="col-xs-9 bugInfoPriority txt pd0"><span
+                                            class="label label-primary">中</span></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <label class="col-xs-3 control-label pd0">分配人</label>
+                                    <div class="col-xs-9 bugInfoAssign txt pd0">耿玉霞</div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <label class="col-xs-3 control-label pd0">处理人</label>
+                                    <div class="col-xs-9 bugInfoFixedTo txt pd0"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <label class="col-xs-6 control-label pd0">计划日期</label>
+                                    <div class="col-xs-6 txt bugInfoTreatment pd0"><span class="">2020-03-09</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <label class="col-xs-6 control-label pd0">截止日期</label>
+                                    <div class="col-xs-6 txt bugInfoTreatment2 pd0"><span class="red">2020-03-09</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bugInfoDrag" class="bugInfoDrag"></div>
+    </div>
+
+
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="js/zui.min.js"></script>
+    <script src="lib/datatable/zui.datatable.min.js"></script>
+    <script src="lib/bootbox/bootbox.min.js"></script>
+    <script src="lib/datetimepicker/datetimepicker.min.js"></script>
+
+    <script>
+        $(function () {
+            //时间
+            $(".form-date").datetimepicker({
+                language: "zh-CN",
+                weekStart: 1,
+                todayBtn: 1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 2,
+                minView: 2,
+                forceParse: 0,
+                format: "yyyy-mm-dd"
+            });
+            /* 表单弹层*/
+            $('#triggerButton').modalTrigger({
+                custom: '#myModalAlert'
+            });
+
+            // 表格数据
+            $('.datatable').datatable({
+                sortable: true
+            })
+            $('.datatable1').datatable({
+                sortable: true,
+                data: {
+                    cols: [{
+                            width: 80,
+                            text: '编号',
+                            type: 'number',
+                            flex: false,
+                            colClass: 'text-center'
+                        },
+                        {
+                            width: 80,
+                            text: '类型',
+                            type: 'string',
+                            flex: false,
+                            colClass: 'text-center',
+                        },
+                        {
+                            width: 200,
+                            text: '标题',
+                            type: 'string',
+                            flex: false,
+                            colClass: 'text-center',
+                            sort: false
+                        },
+                        {
+                            width: 80,
+                            text: '状态',
+                            type: 'string',
+                            flex: false,
+                            colClass: 'text-center',
+                        },
+                        {
+                            width: 80,
+                            text: '优先级',
+                            type: 'string',
+                            flex: false,
+                            colClass: 'text-center',
+                        },
+                        {
+                            width: 80,
+                            text: '指派给',
+                            type: 'string',
+                            flex: false,
+                            colClass: 'text-center',
+                        },
+                        {
+                            width: 120,
+                            text: '计划日期',
+                            type: 'data',
+                            flex: false,
+                            colClass: 'text-center',
+                        },
+                        {
+                            width: 120,
+                            text: '截止日期',
+                            type: 'data',
+                            flex: false,
+                            colClass: 'text-center',
+                        },
+                        {
+                            width: 120,
+                            text: '修改日期',
+                            type: 'data',
+                            flex: false,
+                            colClass: 'text-center',
+                        }
+                    ],
+                    rows: [{
+                        data: [1, '任务',
+                            '<input type="text" class="form-control"  value="标题标题标题标题标题">',
+                            '未解决', '中', 'color', '2020-03-09',
+                            '2020-03-09', '2020-03-09'
+                        ]
+                    }]
+                },
+            });
+
+            var title = '';
+            var getTitle = $.zui.store.get('title');
+            if (getTitle) {
+                $("#title").html(getTitle);
+                $(".title-input").val(getTitle);
+            }
+            $.each($(".datatable tbody tr"), function () {
+                var input = $(this).find("td").eq(2).find("input")
+                title = input.val();
+                input.bind("input propertychange", function (event) {
+                    title = input.val();
+                    $.zui.store.set('title', title);
+                    $("#title").html(title);
+                    $(".title-input").val(title);
+                });
+
+                $(this).on("click", function () {
+                    $('#bugInfoPage').removeClass("fadeOutRightBig").addClass("fadeInRightBig");
+                })
+            });
+            $(document).click(function () {
+                if ($('#bugInfoPage').hasClass("fadeInRightBig")) {
+                    $('#bugInfoPage').removeClass("fadeInRightBig").addClass("fadeOutRightBig");
+                }
+            });
+            $('#bugInfoPage,.datatable tbody tr').click(function () {
+                return false;
+            });
+
+
+
+
+        })
+    </script>
+</body>
+
+</html>
